@@ -41,6 +41,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 
   font-family: OpenSans, sans-serif;
   font-size: 16px;
@@ -48,24 +49,26 @@ body {
   color: var(--dark);
 }
 
-.main {
-  max-width: 1110px;
+main {
+  
 }
 
-.section {
-  text-align: center;
-  padding: 100px 0;
+section {
+  max-width: 1110px;
+  padding: 100px 165px;
+  position: relative;
 }
 
 h1,
 h2,
 h3 {
+  margin: 0;
   font-family: Neucha, cursive;
   line-height: 1.2em;
 }
 
 h1 {
-  font-size: 72;
+  font-size: 72px;
 }
 
 h2 {
@@ -74,4 +77,64 @@ h2 {
 
 h3 {
   font-size: 34px;
+}
+
+.base-color {
+  color: var(--base-color);
+}
+
+.dark-color {
+  color: var(--dark);
+}
+
+.background {
+  position: relative;
+  background-color: var(--light);
+
+  &::before {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background: url("../../../assets/img/background.png");
+    opacity: 0.1;
+    content: "";
+  }
+}
+
+.main-image {
+  position: absolute;
+  top: 55px;
+  right: -105px;
+  height: 525px;
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  margin-top: 185px;
+  column-gap: 30px;
+}
+
+.text-left, .text-right {
+  flex: 1 1 540px;
+}
+
+.link {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 40px;
+
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.orange {
+  background-color: var(--base-color);
+  color: var(--white);
 }
