@@ -1,0 +1,33 @@
+{
+  "name": "layout-designer-project-58",
+  "version": "1.0.0",
+  "description": "Layout hexlet project",
+  "main": "./src/index.html",
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "stylelint": "^15.2.0",
+    "stylelint-config-standard": "^30.0.1",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "stylelint-scss": "^4.4.0",
+    "surge": "^0.23.1"
+  },
+  "scripts": {
+    "lint": "npx stylelint ./src/styles/*.css && npx stylelint ./src/styles/**/*.scss && npx htmlhint ./src/*.html",
+    "deploy": "npx surge ./src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-Volo/layout-designer-project-58.git"
+  },
+  "keywords": [
+    "layout",
+    "html",
+    "css"
+  ],
+  "author": "Alex Volo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alex-Volo/layout-designer-project-58/issues"
+  },
+  "homepage": "https://github.com/Alex-Volo/layout-designer-project-58#readme"
+}
